@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Gano.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Gano"
+    xmlns:pages="clr-namespace:Gano.Pages"
+    Title="Gano">
+
+    <TabBar>
+        <ShellContent
+            Title="Ana Sayfa"
+            ContentTemplate="{DataTemplate pages:MainPage}" 
+            Route="MainPage"/>
+
+        <ShellContent
+            Title="Ders Ekle"
+            ContentTemplate="{DataTemplate pages:DersEklePage}"
+            Route="DersEklePage"/>
+
+        <ShellContent
+           Title="Ders Düzenle"
+           ContentTemplate="{DataTemplate pages:DersDuzenlePage}"
+           Route="DersDuzenlePage"
+           IsVisible="False"/>
+
+    </TabBar>
+
+</Shell>

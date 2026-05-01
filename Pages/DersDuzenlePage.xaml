@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gano.Pages.DersDuzenlePage"
+             Title="Ders Düzenle">
+    
+        <VerticalStackLayout Padding="20" Spacing="10">
+            <Entry
+            x:Name="codeEntry"
+            Placeholder="Ders Kodu"
+            Keyboard="Numeric"
+            MaxLength="12"/>
+
+            <Entry
+            x:Name="nameEntry"
+            Placeholder="Ders Adı"
+            MaxLength="50"/>
+
+            <Entry
+            x:Name="aktsEntry"
+            Placeholder="AKTS"
+            Keyboard="Numeric"
+            MaxLength="4"/>
+
+            <Entry
+            x:Name="saatEntry"
+            Placeholder="Haftalık Saat"
+            Keyboard="Numeric"
+            MaxLength="4"/>
+
+        <Picker x:Name="donemPicker" Title="Dönem">
+            <Picker.Items>
+                <x:String>1.Yarıyıl Güz</x:String>
+                <x:String>2.Yarıyıl Bahar</x:String>
+                <x:String>3.Yarıyıl Güz</x:String>
+                <x:String>4.Yarıyıl Bahar</x:String>
+            </Picker.Items>
+        </Picker>
+
+
+        <Picker x:Name="notPicker" Title="Harf Notu">
+            <Picker.Items>
+                <x:String>AA</x:String>
+                <x:String>BA</x:String>
+                <x:String>BB</x:String>
+                <x:String>CB</x:String>
+                <x:String>CC</x:String>
+                <x:String>DC</x:String>
+                <x:String>DD</x:String>
+                <x:String>FF</x:String>
+            </Picker.Items>
+
+        </Picker>
+        <HorizontalStackLayout Spacing="10">
+            <Label Text="Ortalamaya Dahil"/>
+            <Switch x:Name="ortalamaSwitch"/>
+        </HorizontalStackLayout>
+            
+        <Button
+             x:Name="btnGuncelle"
+             Text="Güncelle"
+             BackgroundColor="Green"
+             TextColor="White"
+             Clicked="btnGuncelle_Clicked"/>
+            
+    </VerticalStackLayout>
+</ContentPage>

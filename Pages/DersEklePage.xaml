@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gano.Pages.DersEklePage"
+             Title="Ders Ekle">
+
+    <VerticalStackLayout Padding="20" Spacing="10">
+
+        <Label Text="Ders Ekle" 
+               FontSize="26"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"/>
+
+        <Entry x:Name="codeEntry"
+               Placeholder="Ders Kodu"
+               Keyboard="Numeric"
+               MaxLength="12"/>
+        
+        <Entry x:Name="nameEntry"
+               Placeholder="Ders Adı"
+               MaxLength="50"/>
+        
+        <Entry x:Name="aktsEntry"
+               Placeholder="AKTS"
+               Keyboard="Numeric"
+               MaxLength="4"/>
+        
+        <Entry x:Name="saatEntry" 
+               Placeholder="Haftalık Saat" 
+               Keyboard="Numeric"
+               MaxLength="4"/>
+
+        <Picker x:Name="donemPicker" Title="Dönem">
+            <Picker.Items>
+                <x:String>1.Yarıyıl Güz</x:String>
+                <x:String>2.Yarıyıl Bahar</x:String>
+                <x:String>3.Yarıyıl Güz</x:String>
+                <x:String>4.Yarıyıl Bahar</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Picker x:Name="notPicker" Title="Harf Notu">
+            <Picker.Items>
+                <x:String>AA</x:String>
+                <x:String>BA</x:String>
+                <x:String>BB</x:String>
+                <x:String>CB</x:String>
+                <x:String>CC</x:String>
+                <x:String>DC</x:String>
+                <x:String>DD</x:String>
+                <x:String>FF</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <HorizontalStackLayout Spacing="10">
+            <Label Text="Ortalamaya dahil mi?" VerticalOptions="Center"/>
+            <Switch x:Name="ortalamaSwitch"/>
+        </HorizontalStackLayout>
+
+        <Button Text="Kaydet"
+                BackgroundColor="#512BD4"
+                TextColor="White"
+                CornerRadius="12"
+                HeightRequest="45"
+                Clicked="Button_Clicked"/>
+
+    </VerticalStackLayout>
+</ContentPage>
